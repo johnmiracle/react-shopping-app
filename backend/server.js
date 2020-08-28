@@ -5,7 +5,7 @@ import usersRouter from "./routes/users";
 import productsRouter from "./routes/products";
 import ordersRouter from "./routes/orders";
 import bodyParser from "body-parser";
-import passport from "passport"
+import passport from "passport";
 
 const port = 4000;
 
@@ -19,7 +19,7 @@ require("./models/Order");
 // mongoDb setup
 mongoose.set("useCreateIndex", true);
 mongoose
-  .connect(process.env.Database || "mongodb://localhost/react_shooping_cart", { useNewUrlParser: true, autoReconnect: true, useUnifiedTopology: true })
+  .connect(process.env.Database || "mongodb://localhost/react-shooping-cart", { useNewUrlParser: true, autoReconnect: true, useUnifiedTopology: true })
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.log(err));
 
